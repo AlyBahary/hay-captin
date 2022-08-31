@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.beetleware.hayatiDeliveryMan.ui.fragments.personal_profile.PersonalProfileViewModel" />
+    </data>
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/container_for_toolbar"
+                android:background="@drawable/radius_search"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x70dp">
+
+                    <ImageView
+                        android:id="@+id/btn_back"
+                        style="@style/clickable_view_border"
+                        android:layout_marginStart="@dimen/x10dp"
+                        android:layout_marginEnd="@dimen/space_10"
+                        android:layout_centerVertical="true"
+                        android:padding="@dimen/x13dp"
+                        android:layout_alignParentStart="true"
+                        android:backgroundTint="@color/white"
+                        android:background="@drawable/ic_baseline_arrow_back_24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/questive_bold"
+                        android:text="@string/personal_profile"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/x18sp" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:fillViewport="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img_profile"
+                        android:src="@drawable/ic_user_profile"
+                        android:layout_marginTop="@dimen/space_15"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="@dimen/x80dp"
+                        android:layout_height="@dimen/x80dp"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/changeProfileImage"
+                        android:layout_marginTop="@dimen/x14dp"
+                        android:layout_marginBottom="@dimen/space_10"
+                        app:cornerRadius="@dimen/space_20"
+                        android:paddingTop="@dimen/x11dp"
+                        android:paddingBottom="@dimen/x11dp"
+                        android:textSize="@dimen/x10sp"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/questive_requler"
+                        android:backgroundTint="@android:color/white"
+                        app:strokeColor="@color/colorPrimary"
+                        android:textColor="@android:color/black"
+                        android:text="@string/change_persoanl_photo"
+                        android:layout_width="wrap_content"
+                        android:paddingStart="@dimen/x20dp"
+                        android:paddingEnd="20dp"
+                        app:icon="@drawable/ic_upload"
+                        app:iconTint="@android:color/black"
+                        android:layout_marginStart="@dimen/x50dp"
+                        android:layout_marginEnd="@dimen/x50dp"
+                        android:layout_height="wrap_content"/>
+
+
+
+                        <EditText
+                            android:id="@+id/et_name"
+                            android:inputType="textPersonName"
+                            app:met_underlineColor="@color/transparent"
+                            app:met_hideUnderline="true"
+                            android:background="@drawable/bk_login"
+                            android:layout_gravity="center_vertical|start"
+                            android:textSize="@dimen/x12sp"
+                            android:textColor="@android:color/black"
+                            android:fontFamily="@font/nova_regular"
+                            android:hint="@string/name"
+                            app:required="true"
+                            android:textColorHint="@android:color/black"
+                            app:validation_type="name"
+                            android:paddingStart="@dimen/space_10"
+                            android:paddingEnd="@dimen/space_10"
+                            android:paddingTop="@dimen/x7dp"
+                            android:paddingBottom="@dimen/x7dp"
+                            android:layout_marginStart="@dimen/x20dp"
+                            android:layout_marginEnd="@dimen/x20dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+
+                        <EditText
+                            android:id="@+id/et_phone_number"
+                            android:inputType="phone"
+                            android:background="@drawable/bk_login"
+                            app:met_underlineColor="@color/transparent"
+                            app:met_hideUnderline="true"
+                            android:layout_marginTop="@dimen/space_10"
+                            android:editable="false"
+                            android:textColor="@android:color/black"
+                            android:focusable="false"
+                            android:clickable="false"
+                            android:textSize="@dimen/x12sp"
+                            android:fontFamily="@font/nova_regular"
+                            android:hint="@string/phone_number"
+                            app:required="true"
+                            android:textColorHint="@android:color/black"
+                            app:validation_type="phone"
+                            android:layout_gravity="center_vertical"
+                            android:paddingStart="@dimen/space_10"
+                            android:paddingEnd="@dimen/space_10"
+                            android:paddingTop="@dimen/x7dp"
+                            android:paddingBottom="@dimen/x7dp"
+                            android:layout_marginStart="@dimen/x20dp"
+                            android:layout_marginEnd="@dimen/x20dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+
+                        <EditText
+                            android:id="@+id/et_email"
+                            app:met_underlineColor="@color/transparent"
+                            app:met_hideUnderline="true"
+                            android:background="@drawable/bk_login"
+                            android:editable="false"
+                            android:focusable="false"
+                            android:textColor="@android:color/black"
+                            android:layout_marginTop="@dimen/space_10"
+                            android:clickable="false"
+                            android:layout_gravity="center_vertical|start"
+                            android:textSize="@dimen/x12sp"
+                            android:fontFamily="@font/nova_regular"
+                            android:hint="@string/email"
+                            android:textColorHint="@android:color/black"
+                            android:paddingStart="@dimen/space_10"
+                            android:paddingEnd="@dimen/space_10"
+                            android:paddingTop="@dimen/x7dp"
+                            android:paddingBottom="@dimen/x7dp"
+                            android:layout_marginStart="@dimen/x20dp"
+                            android:layout_marginEnd="@dimen/x20dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+
+                        <EditText
+                            android:id="@+id/et_address"
+                            android:visibility="gone"
+                            android:background="@drawable/bk_login"
+                            android:inputType="textPersonName"
+                            app:met_underlineColor="@color/transparent"
+                            app:met_hideUnderline="true"
+                            android:layout_marginTop="@dimen/space_10"
+                            android:layout_gravity="center_vertical|start"
+                            android:textSize="@dimen/x14sp"
+                            android:fontFamily="@font/nova_regular"
+                            android:hint="@string/address"
+                            app:required="true"
+                            app:validation_type="name"
+                            android:textColorHint="@android:color/black"
+                            android:paddingStart="@dimen/space_10"
+                            android:paddingEnd="@dimen/space_10"
+                            android:paddingTop="@dimen/x7dp"
+                            android:paddingBottom="@dimen/x7dp"
+                            android:layout_marginStart="@dimen/x20dp"
+                            android:layout_marginEnd="@dimen/x20dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+
+                    <com.google.android.material.button.MaterialButton
+                        app:cornerRadius="@dimen/x8dp"
+                        android:paddingTop="@dimen/x11dp"
+                        android:paddingBottom="@dimen/x11dp"
+                        android:textSize="@dimen/x12sp"
+                        android:layout_marginTop="@dimen/x15dp"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/questive_requler"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="@android:color/white"
+                        android:text="@string/update_information"
+                        android:layout_marginBottom="@dimen/x50dp"
+                        android:id="@+id/btn_update_profile"
+                        android:layout_width="match_parent"
+                        android:layout_marginStart="@dimen/space_20"
+                        android:layout_marginEnd="@dimen/space_20"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+        <include layout="@layout/progress_bar"
+            app:viewModel="@{viewModel}"/>
+    </RelativeLayout>
+
+
+</layout>

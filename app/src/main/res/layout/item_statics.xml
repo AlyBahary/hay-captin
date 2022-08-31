@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewHolder"
+            type="com.beetleware.hayatiDeliveryMan.ui.adapter.StaticsAdapter.StaticsViewHolder" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/container_for_statics"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/x120dp"
+    android:layout_marginStart="@dimen/x5dp"
+    android:layout_marginEnd="@dimen/x5dp"
+    android:background="@drawable/radius_statics"
+    android:layout_height="@dimen/x140dp">
+
+    <ImageView
+        android:id="@+id/img_delivery"
+        android:layout_marginTop="@dimen/x10dp"
+        android:layout_marginStart="@dimen/x15dp"
+        android:src="@drawable/ic_delivery"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_number"
+        app:layout_constraintTop_toBottomOf="@id/img_delivery"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        tools:text="34"
+        android:layout_marginTop="@dimen/space_10"
+        android:layout_marginStart="@dimen/space_15"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:fontFamily="@font/questive_bold"
+        android:textSize="@dimen/x18sp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:textColor="@color/white"
+        android:textSize="@dimen/x14sp"
+        android:fontFamily="@font/questive_bold"
+        tools:text="طلب جديد"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/x7dp"
+        android:layout_marginStart="@dimen/space_15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

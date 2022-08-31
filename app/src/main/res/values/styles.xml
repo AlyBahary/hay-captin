@@ -1,0 +1,115 @@
+<resources>
+
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/colorPrimary</item>
+        <item name="android:textViewStyle">@style/bottom_tv</item>
+        <item name="fontFamily">@font/questive_requler</item>
+
+
+    </style>
+
+    <style name="BottomSheetDialogThemeNoFloating" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowSoftInputMode">adjustResize|stateVisible</item>
+    </style>
+    <!-- change Theme color -->
+
+
+    <style name="FullScreenDialogStyle" parent="Theme.MaterialComponents.Light.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@color/colorPrimary</item>
+    </style>
+
+
+<!--    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">-->
+<!--        <item name="android:windowBackground">@drawable/background_splash</item>-->
+<!--    </style>-->
+
+
+    <style name="AppTheme.Launcher">
+        <item name="android:windowBackground">@color/fill_background</item>
+        <!-- Optional, on Android 5+ you can modify the colorPrimaryDark color to match the windowBackground color for further branding-->
+        <!-- <item name="colorPrimaryDark">@android:color/white</item> -->
+    </style>
+
+    <style name="clickable_view">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="clickable_view_border" parent="clickable_view">
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+
+
+    <style name="btn_material_style" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_marginStart">@dimen/x15dp</item>
+        <item name="android:layout_marginEnd">@dimen/x15dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:fontFamily">@font/nova_bold</item>
+        <item name="android:layout_marginTop">@dimen/x16dp</item>
+        <item name="cornerRadius">@dimen/x24dp</item>
+    </style>
+
+
+
+    <style name="BottomNavigationView" parent="@style/TextAppearance.AppCompat.Caption">
+         <item name="android:textSize">12.5sp</item>
+    </style>
+
+    <style name="BottomNavigationView.Active" parent="@style/TextAppearance.AppCompat.Caption">
+            <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="header_style">
+        <item name="android:textSize">@dimen/x24sp</item>
+        <item name="android:fontFamily">@font/almarai_regular</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:layout_marginStart">@dimen/x30dp</item>
+        <item name="android:layout_marginEnd">@dimen/x40dp</item>
+    </style>
+
+    <style name="sub_header_style">
+        <item name="android:textSize">@dimen/x22sp</item>
+        <item name="android:fontFamily">@font/almarai_bold</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:layout_marginStart">@dimen/x40dp</item>
+        <item name="android:layout_marginEnd">@dimen/x40dp</item>
+    </style>
+
+    <style name="bottom_tv">
+        <item name="android:textSize">@dimen/x12sp</item>
+        <item name="fontFamily">@font/almarai_regular</item>
+    </style>
+
+    <style name="et_material_style" parent="Widget.AppCompat.EditText">
+        <item name="android:layout_marginStart">@dimen/x35dp</item>
+        <item name="android:layout_marginEnd">@dimen/x35dp</item>
+        <item name="android:layout_marginTop">@dimen/space_8</item>
+        <item name="android:paddingStart">@dimen/x15dp</item>
+        <item name="android:fontFamily">@font/almarai_regular</item>
+        <item name="android:padding">@dimen/x12sp</item>
+        <item name="android:textSize">@dimen/x20sp</item>
+        <item name="android:textColorHint">@color/colorPrimary</item>
+    </style>
+
+    <style name="bold_header">
+        <item name="fontFamily">@font/almarai_extra_bold</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/x17sp</item>
+    </style>
+
+
+
+</resources>

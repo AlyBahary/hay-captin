@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.beetleware.hayatiDeliveryMan.ui.fragments.home.HomeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/x15dp"
+                    android:layout_marginTop="@dimen/space_10"
+                    android:fontFamily="@font/questive_bold"
+                    android:text="@string/main_home"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/x16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/btn_notification"
+                    android:layout_width="@dimen/x35dp"
+                    android:layout_height="@dimen/x35dp"
+                    android:layout_marginTop="@dimen/space_10"
+                    android:layout_marginEnd="@dimen/x12dp"
+                    android:src="@drawable/ic_notification_ic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_statics"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/x12dp"
+                    android:layout_marginTop="@dimen/x20dp"
+                    android:fontFamily="@font/questive_bold"
+                    android:text="@string/statics"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/x15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_main" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rc_statics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/x12dp"
+                    android:layout_marginTop="@dimen/space_10"
+                    android:layout_marginEnd="@dimen/x12dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_statics" />
+
+                <TextView
+                    android:id="@+id/tv_incoming_requests"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/x12dp"
+                    android:layout_marginTop="@dimen/x20dp"
+                    android:fontFamily="@font/questive_bold"
+                    android:text="@string/incoming_requests"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/x14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rc_statics" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rc_incoming_requests"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_12"
+                    android:layout_marginTop="@dimen/space_10"
+                    android:layout_marginEnd="@dimen/space_12"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_incoming_requests" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rc_incoming_sub_requests"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_12"
+                    android:layout_marginTop="@dimen/space_10"
+                    android:layout_marginEnd="@dimen/space_12"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rc_incoming_requests" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+        <include
+            layout="@layout/progress_bar"
+            app:viewModel="@{viewModel}" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

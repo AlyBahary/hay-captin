@@ -1,0 +1,4 @@
+include ':spinner-material'
+include ':material_edittext'
+include ':app'
+rootProject.name = "hayatiDeliveryMan"

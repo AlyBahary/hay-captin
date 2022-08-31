@@ -1,0 +1,50 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = '1.3.72'
+    ext.nav_version_ktx = '2.2.2'
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+//        maven { url 'https://tokbox.bintray.com/maven'  }
+
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.1.0'
+        def nav_version = "2.3.1"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
+        classpath 'com.jakewharton.sdkmanager:gradle-plugin:0.12.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.google.gms:google-services:4.3.10'
+
+
+
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+//        maven { url "http://tokbox.bintray.com/maven" }
+//        maven { url  'http://dl.bintray.com/piasy/maven' }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+ext{
+    lifecycle_version = '2.2.0'
+    paging_version = '2.1.2'
+    retrofit_version = '2.5.0'
+    okHttp3_version = '3.12.1'
+    glide_version = '4.11.0'
+    dagger2_version = '2.23'
+    pinEntryEditText_version = '1.3.10'
+    circularImg_version = '3.1.0'
+    rtlViewPager_version = '2.0.0'
+    firebase_version = '17.4.1'
+}

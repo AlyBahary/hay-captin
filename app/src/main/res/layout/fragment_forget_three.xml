@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.beetleware.hayatiDeliveryMan.ui.fragments.auth.forget_one.ForgetOneViewModel" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/fill_background">
+
+        <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/fill_background"
+            android:fillViewport="true">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/btn_back"
+                        style="@style/clickable_view_border"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_baseline_arrow_back_24"
+                        android:drawablePadding="@dimen/x8dp"
+                        android:fontFamily="@font/questive_requler"
+                        android:padding="@dimen/space_10"
+                        android:text="@string/back"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/x16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="@dimen/space_10"
+                        android:layout_marginTop="@dimen/x15dp"
+                        android:layout_marginEnd="@dimen/space_10"
+                        android:fontFamily="@font/questive_bold"
+                        android:text="@string/are_you_forget_password"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/x16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/x15dp"
+                        android:layout_marginTop="@dimen/space_10"
+                        android:layout_marginEnd="@dimen/x40dp"
+                        android:layout_marginRight="@dimen/space_10"
+                        android:text="@string/enter_your_new_password"
+                        android:textColor="@color/light_pink"
+                        android:textSize="@dimen/x12sp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/x50dp"
+                        android:layout_marginStart="@dimen/x25dp"
+                        android:layout_marginTop="@dimen/x30dp"
+                        android:layout_marginEnd="@dimen/x25dp"
+                        android:layout_marginBottom="@dimen/space_5"
+                        android:paddingStart="@dimen/space_10"
+                        android:paddingEnd="@dimen/space_10"
+                        app:cardCornerRadius="@dimen/x5dp">
+
+                        <com.beetleware.hayatiDeliveryMan.ui.customs.CustomMaterialEditText
+                            android:id="@+id/tv_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/space_10"
+                            android:layout_marginEnd="@dimen/space_10"
+                            android:drawableStart="@drawable/ic_password"
+                            android:drawablePadding="@dimen/space_10"
+                            android:fontFamily="@font/nova_regular"
+                            android:hint="@string/password"
+                            android:inputType="textPassword"
+                            android:paddingStart="@dimen/space_10"
+                            android:paddingEnd="@dimen/space_10"
+                            android:textAlignment="viewStart"
+                            android:textSize="@dimen/x12sp"
+                            app:met_hideUnderline="true"
+                            app:met_underlineColor="@color/transparent"
+                            app:required="true"
+                            app:validation_type="password" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/x50dp"
+                        android:layout_marginStart="@dimen/x25dp"
+                        android:layout_marginTop="@dimen/x10dp"
+                        android:layout_marginEnd="@dimen/x25dp"
+                        android:layout_marginBottom="@dimen/space_5"
+                        android:paddingStart="@dimen/space_10"
+                        android:paddingEnd="@dimen/space_10"
+                        app:cardCornerRadius="@dimen/x5dp">
+
+                        <com.beetleware.hayatiDeliveryMan.ui.customs.CustomMaterialEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/space_10"
+                            android:layout_marginEnd="@dimen/space_10"
+                            android:drawableStart="@drawable/ic_password"
+                            android:drawablePadding="@dimen/space_10"
+                            android:fontFamily="@font/nova_regular"
+                            android:hint="@string/confirm_password"
+                            android:inputType="textPassword"
+                            android:paddingStart="@dimen/space_10"
+                            android:paddingEnd="@dimen/space_10"
+                            android:textAlignment="viewStart"
+                            android:textSize="@dimen/x12sp"
+                            app:met_hideUnderline="true"
+                            app:met_underlineColor="@color/transparent"
+                            app:required="true"
+                            app:validation_type="confirm_pass" />
+                    </androidx.cardview.widget.CardView>
+
+
+                    <TextView
+                        android:id="@+id/btn_send"
+                        style="@style/clickable_view_border"
+                        android:layout_width="@dimen/x100dp"
+                        android:layout_height="@dimen/x70dp"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="@dimen/x200dp"
+                        android:layout_marginEnd="-15dp"
+                        android:layout_marginBottom="@dimen/x10dp"
+                        android:background="@drawable/ic_start_end"
+                        android:drawableEnd="@drawable/intro_arrow"
+                        android:drawableTint="@color/white"
+                        android:gravity="center"
+                        android:onClick="@{(v) -> viewModel.validateInputData(v)}"
+                        android:padding="@dimen/space_20"
+                        android:text="@string/done_ok"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/x20dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:background="@color/colorAccent"
+                    android:gravity="left" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <include
+            layout="@layout/progress_bar"
+            app:viewModel="@{viewModel}" />
+    </RelativeLayout>
+
+</layout>

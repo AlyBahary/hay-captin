@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="space_1">@dimen/x1dp</dimen>
+    <dimen name="space_2">@dimen/x2dp</dimen>
+    <dimen name="space_3">@dimen/x3dp</dimen>
+    <dimen name="space_5">@dimen/x5dp</dimen>
+    <dimen name="space_6">@dimen/x6dp</dimen>
+    <dimen name="space_8">@dimen/x8dp</dimen>
+    <dimen name="space_10">@dimen/x10dp</dimen>
+    <dimen name="space_12">@dimen/x12dp</dimen>
+    <dimen name="space_15">@dimen/x15dp</dimen>
+    <dimen name="space_20">@dimen/x20dp</dimen>
+    <dimen name="space_24">@dimen/x24dp</dimen>
+    <dimen name="space_50">@dimen/x50dp</dimen>
+    <!-- Bottom Menu Override -->
+    <dimen name="design_bottom_navigation_text_size" tools:override="true">8sp</dimen>
+    <dimen name="design_bottom_navigation_active_text_size" tools:override="true">8sp</dimen>
+</resources>

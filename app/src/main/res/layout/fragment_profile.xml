@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.beetleware.hayatiDeliveryMan.ui.fragments.profile.ProfileViewModel" />
+    </data>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <RelativeLayout
+            android:id="@+id/container_for_register"
+            android:orientation="vertical"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/img_header"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x100dp"
+                android:background="@drawable/profile_pic"
+                android:backgroundTintMode="multiply"
+                android:backgroundTint="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/space_10"
+                android:fontFamily="@font/questive_bold"
+                android:text="@string/profile"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x16sp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/container_for_profile"
+                app:cardCornerRadius="@dimen/x10dp"
+                android:layout_marginStart="@dimen/space_20"
+                android:layout_marginEnd="@dimen/space_20"
+                android:layout_marginTop="@dimen/x60dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_profile_name"
+                        android:layout_marginTop="@dimen/x20dp"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@android:color/black"
+                        android:fontFamily="@font/questive_bold"
+                        android:textSize="@dimen/x14sp"
+                        android:text="محمد السيد"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/tv_profile_phone"
+                        android:layout_marginTop="@dimen/x5dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="011 1151 51554"
+                        android:textSize="@dimen/x10sp"
+                        android:layout_marginBottom="@dimen/space_15"
+                        android:textColor="@color/light_pink"
+                        android:fontFamily="@font/questive_requler"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rc_profile"
+                android:layout_margin="@dimen/space_10"
+                android:layout_below="@id/container_for_profile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </RelativeLayout>
+
+        <include layout="@layout/progress_bar"
+            app:viewModel="@{viewModel}"/>
+    </RelativeLayout>
+
+</layout>

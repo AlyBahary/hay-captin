@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewHolder"
+            type="com.beetleware.hayatiDeliveryMan.ui.adapter.NotificationAdapter.NotificationViewHolder" />
+    </data>
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="@dimen/space_10"
+        android:elevation="@dimen/space_10"
+        android:layout_marginStart="@dimen/space_20"
+        android:layout_marginEnd="@dimen/space_20"
+        android:layout_marginTop="@dimen/space_10"
+        android:layout_marginBottom="@dimen/space_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/img_notifications"
+                android:layout_alignParentStart="true"
+                android:layout_width="@dimen/x80dp"
+                android:layout_height="@dimen/x70dp"
+                android:src="@drawable/ic_notifications"
+                />
+
+            <TextView
+                android:id="@+id/tv_body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x20dp"
+                android:textSize="@dimen/x12sp"
+                android:layout_marginEnd="@dimen/space_10"
+                android:layout_toEndOf="@id/img_notifications"
+                android:fontFamily="@font/questive_requler"
+                android:textColor="@android:color/black"
+                tools:text="  جديد لقد قام أحمد محمود علي بطلب جديد لقد قام أحمد محمود علي بطلب" />
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_body"
+                android:textSize="@dimen/x10sp"
+                android:layout_marginStart="@dimen/space_5"
+                android:layout_marginTop="@dimen/space_5"
+                android:layout_marginEnd="@dimen/space_5"
+                android:layout_marginBottom="@dimen/space_5"
+                android:layout_toEndOf="@id/img_notifications"
+                android:textColor="@color/light_pink"
+                tools:text="16 mars 2020" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

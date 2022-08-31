@@ -1,0 +1,217 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: "androidx.navigation.safeargs"
+apply plugin: 'com.google.gms.google-services'
+//apply plugin: 'com.google.gms.google-services'
+//apply plugin: 'com.google.firebase.crashlytics'
+//apply plugin: 'com.google.gms.google-services'
+
+
+android {
+    compileSdkVersion 31
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "com.beetleware.hayatiDeliveryMan"
+        minSdkVersion 21
+        targetSdkVersion 31
+        versionCode 2
+        versionName "0.0.2"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    bundle{
+        language {
+            // Specifies that the app bundle should not support
+            // configuration APKs for language resources. These
+            // resources are instead packaged with each base and
+            // dynamic feature APK.
+            enableSplit = false
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+    }
+    dexOptions {
+        preDexLibraries = false
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField("String", "BASE_URL", "\"https://hayati.com.sa/api/\"")
+        }
+
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField("String", "BASE_URL", "\"https://hayati.com.sa/api/\"")
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.firebase:firebase-messaging-ktx:23.0.0'
+//    implementation 'com.google.firebase:firebase-firestore:22.0.0'
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'com.google.android.material:material:1.3.0-alpha01'
+
+    implementation platform('com.google.firebase:firebase-bom:29.0.3')
+    implementation 'com.google.firebase:firebase-analytics'
+    
+    // Android KTX
+    implementation 'androidx.core:core-ktx:1.3.0'
+    // UI Frameworks
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.annotation:annotation:1.1.0'
+    //life cycle + viewModel + LiveData
+    implementation "androidx.lifecycle:lifecycle-extensions:$rootProject.ext.lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-common-java8:$rootProject.ext.lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-reactivestreams-ktx:$rootProject.ext.lifecycle_version"
+    testImplementation "androidx.arch.core:core-testing:2.1.0"
+    // paging
+    implementation "androidx.paging:paging-runtime-ktx:$rootProject.ext.paging_version"
+    //navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version_ktx"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version_ktx"
+    // Dagger
+    implementation "com.google.dagger:dagger:$rootProject.ext.dagger2_version"
+    //noinspection OutdatedLibrary
+    implementation "com.google.dagger:dagger-android:$rootProject.ext.dagger2_version"
+    implementation "com.google.dagger:dagger-android-support:$rootProject.ext.dagger2_version"
+    kapt "com.google.dagger:dagger-compiler:$rootProject.ext.dagger2_version"
+    //networking
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$rootProject.ext.retrofit_version"
+    implementation "com.squareup.okhttp3:okhttp:$rootProject.ext.okHttp3_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$rootProject.ext.okHttp3_version"
+    //glide image library
+    implementation "com.github.bumptech.glide:glide:$rootProject.ext.glide_version"
+    kapt "com.github.bumptech.glide:compiler:$rootProject.ext.glide_version"
+
+    //code edit text
+    implementation "com.alimuzaffar.lib:pinentryedittext:$rootProject.ext.pinEntryEditText_version"
+    //circular image
+    implementation "de.hdodenhof:circleimageview:$rootProject.ext.circularImg_version"
+    // Slider
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.daimajia.slider:library:1.1.5@aar'
+    //downTimer
+    implementation 'com.bcgdv.asia.lib:ticktock:1.3'
+    // rtl view pager
+    implementation "com.duolingo.open:rtl-viewpager:$rootProject.ext.rtlViewPager_version"
+    // Material Views up and down
+    implementation 'com.flaviofaria:kenburnsview:1.0.7'
+    implementation 'com.jpardogo.materialtabstrip:library:1.1.0'
+    //google services
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    // multidex
+    implementation 'androidx.multidex:multidex:2.0.1'
+    // Keyboard doesn't affect on views
+    implementation "net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:2.2.1"
+    //fireBase crash_reporting
+//    implementation "com.google.firebase:firebase-core:$rootProject.ext.firebase_version"
+//    implementation "com.google.firebase:firebase-messaging:20.2.0"
+//    implementation 'com.google.firebase:firebase-storage:19.1.1'
+
+    // Slider
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.daimajia.slider:library:1.1.5@aar'
+    implementation 'com.android.support:multidex:1.0.3'
+    //Progress bar
+    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+    // Date Picker
+    implementation 'com.wdullaer:materialdatetimepicker:4.2.3'
+    // Notification badge
+    implementation 'com.nex3z:notification-badge:1.0.2'
+    // Compress Image File
+    implementation 'id.zelory:compressor:2.1.0'
+    //material editText
+    implementation project(path: ':material_edittext')
+    implementation project(path: ':spinner-material')
+
+    // Bottom Navigation
+    implementation 'com.etebarian:meow-bottom-navigation:1.2.0'
+    // Add for NavController support
+    implementation "com.mikepenz:materialdrawer-nav:8.0.0"
+    implementation "com.mikepenz:crossfader:1.6.0"
+
+    // OpenTox
+    implementation 'com.opentok.android:opentok-android-sdk:2.17.0'
+    implementation 'pub.devrel:easypermissions:3.0.0'
+
+    // Mask
+    implementation 'ru.egslava:MaskedEditText:1.0.5'
+
+    // PIN
+    implementation 'com.chaos.view:pinview:1.4.3'
+
+    // Range
+    implementation 'com.crystal:crystalrangeseekbar:1.1.3'
+
+    // Precentage progress
+    implementation 'com.sasank.roundedhorizontalprogress:roundedhorizontalprogress:1.0.1'
+
+    // Lottie Animation Library
+    implementation 'com.airbnb.android:lottie:3.4.0'
+    implementation 'com.github.f0ris.sweetalert:library:1.6.2'
+    // Material Dialog Library
+    implementation 'com.shreyaspatil:MaterialDialog:2.1'
+    //flex box
+    implementation 'com.google.android:flexbox:2.0.1'
+
+    //Emotions
+    implementation 'com.vanniktech:emoji:0.6.0'
+    implementation 'com.vanniktech:emoji-ios:0.6.0'
+//
+//    //voice
+//    implementation 'com.github.piasy:rxandroidaudio:1.6.0'
+//    implementation 'com.github.piasy:AudioProcessor:1.6.0'
+
+
+    // rounded bottomSheet
+    implementation 'com.github.Deishelon:RoundedBottomSheet:1.0.1'
+    implementation 'com.droidninja:filepicker:2.2.1'
+
+    // easy permission
+    implementation 'pub.devrel:easypermissions:3.0.0'
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
+    implementation 'com.gauravk.bubblenavigation:bubblenavigation:1.0.7'
+
+}

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.beetleware.hayatiDeliveryMan.ui.fragments.auth.login.LoginViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/img_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/x130dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/x10dp"
+                android:src="@drawable/hyati_logo" />
+
+            <TextView
+                android:id="@+id/tv_welcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_logo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/space_20"
+                android:layout_marginTop="@dimen/x25dp"
+                android:layout_marginEnd="@dimen/space_20"
+                android:text="@string/welcome_delivery_man"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/x15sp" />
+
+
+            <EditText
+                android:id="@+id/et_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_welcome"
+                android:layout_marginStart="@dimen/space_20"
+                android:layout_marginTop="@dimen/x30dp"
+                android:layout_marginEnd="@dimen/space_20"
+                android:background="@drawable/bk_login"
+                android:drawableStart="@drawable/ic_phone"
+                android:drawablePadding="@dimen/x12dp"
+                android:fontFamily="@font/questive_requler"
+                android:hint="@string/phone_number"
+                android:paddingStart="@dimen/space_10"
+                android:paddingTop="@dimen/x12dp"
+                android:paddingEnd="@dimen/space_10"
+                android:paddingBottom="@dimen/x12dp"
+                android:textAlignment="viewStart"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/x12sp"
+                app:met_hideUnderline="true"
+                app:met_underlineColor="@color/transparent"
+                app:required="true"
+                app:validation_type="phone_or_email" />
+
+            <EditText
+                android:id="@+id/etpassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_data"
+                android:layout_marginStart="@dimen/space_20"
+                android:layout_marginTop="@dimen/space_10"
+                android:layout_marginEnd="@dimen/space_20"
+                android:background="@drawable/bk_login"
+                android:drawableStart="@drawable/ic_password"
+                android:drawablePadding="@dimen/x12dp"
+                android:fontFamily="@font/questive_requler"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:paddingStart="@dimen/space_10"
+                android:paddingTop="@dimen/x12dp"
+                android:paddingEnd="@dimen/space_10"
+                android:paddingBottom="@dimen/x12dp"
+                android:textAlignment="viewStart"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/x12sp"
+                app:met_hideUnderline="true"
+                app:met_underlineColor="@color/transparent"
+                app:required="true"
+                app:validation_type="password" />
+
+
+            <TextView
+                android:id="@+id/tv_forget_password"
+                style="@style/clickable_view_border"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etpassword"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/space_10"
+                android:layout_marginEnd="@dimen/x25dp"
+                android:padding="@dimen/space_10"
+                android:text="@string/forget_password"
+                android:textColor="@android:color/black" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_forget_password"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/space_20"
+                android:layout_marginTop="@dimen/x15dp"
+                android:layout_marginEnd="@dimen/space_20"
+                android:backgroundTint="@color/colorPrimary"
+                android:fontFamily="@font/questive_requler"
+                android:paddingTop="@dimen/x11dp"
+                android:paddingBottom="@dimen/x11dp"
+                android:text="@string/login"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/x14sp"
+                app:cornerRadius="@dimen/x8dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_login"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="@dimen/x30dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_bottom_login" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#47A835</color>
+    <color name="colorPrimaryDark">#47A835</color>
+    <color name="colorAccent">#4FB548</color>
+    <color name="fill_background">#F9F9F9</color>
+    <color name="splash_text">#ACACAC</color>
+    <color name="orange">#FBB02B</color>
+    <color name="unselected_dots">#2B2B2B</color>
+    <color name="seperator">#E6E6E6</color>
+    <color name="transparent" >#00FFFFFF</color>
+    <color name="gmail_background">#FF6661</color>
+    <color name="twitter_color">#12B5F1</color>
+    <color name="fb_background">#5971CD</color>
+    <color name="skip_background">#ECECEC</color>
+    <color name="light_pink">#898989</color>
+    <color name="search_background">#1A707070</color>
+    <color name="blue_color">#EA3731</color>
+    <color name="half_white">#F9F9F9</color>
+    <color name="profile_seperator">#DADADA</color>
+    <color name="light_orange">#F2ED7F</color>
+    <color name="heavy_wight">#F9F9F9</color>
+    <color name="mark_color">#76CB79</color>
+    <color name="border_color">#707070</color>
+    <color name="blue">#6E4092</color>
+    <color name="gray">#A2A2A2</color>
+    <color name="background_progressBar">#791d1d1d</color>
+    <color name="btn_branch">#6ACD82</color>
+    <color name="nearest_color">#ea3731</color>
+    <color name="product_details_color">#BDBDBD</color>
+    <color name="product_sep_color">#F5F5F5</color>
+    <color name="low_pink">#888888</color>
+    <color name="bottom_inactive">#CECECE</color>
+    <color name="blueD6EDFE">#D6EDFE</color>
+    <color name="greenD6EDFE">#9C9BF69F</color>
+    <color name="new_orders_color">#76CB79</color>
+    <color name="close_orders_color">#EA3731</color>
+    <color name="seperator_two">#E8C8C8</color>
+
+</resources>

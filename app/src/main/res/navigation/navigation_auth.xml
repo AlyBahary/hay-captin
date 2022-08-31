@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/loginFragment"
+    android:id="@+id/navigation_auth"
+    >
+
+    <fragment
+        android:id="@+id/loginFragment"
+        tools:layout="@layout/fragment_login"
+        android:name="com.beetleware.hayatiDeliveryMan.ui.fragments.auth.login.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_mainActivity"
+            app:destination="@id/mainActivity" />
+        <action
+            android:id="@+id/action_loginFragment_to_forgetOneFragment"
+            app:destination="@id/forgetOneFragment" />
+    </fragment>
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.beetleware.hayatiDeliveryMan.ui.activities.main.MainActivity"
+        tools:layout="@layout/activity_main"/>
+
+    <fragment
+        android:id="@+id/forgetOneFragment"
+        tools:layout="@layout/fragment_forget_one"
+        android:name="com.beetleware.hayatiDeliveryMan.ui.fragments.auth.forget_one.ForgetOneFragment"
+        android:label="ForgetOneFragment" >
+        <action
+            android:id="@+id/action_forgetOneFragment_to_forgetTwoFragment"
+            app:destination="@id/forgetTwoFragment" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/forgetTwoFragment"
+        tools:layout="@layout/fragment_forget_two"
+        android:name="com.beetleware.hayatiDeliveryMan.ui.fragments.auth.forget_two.ForgetTwoFragment"
+        android:label="ForgetTwoFragment" >
+        <action
+            android:id="@+id/action_forgetTwoFragment_to_forgetThreeFragment"
+            app:destination="@id/forgetThreeFragment" />
+    </dialog>
+
+    <fragment
+        android:id="@+id/forgetThreeFragment"
+        tools:layout="@layout/fragment_forget_three"
+        android:name="com.beetleware.hayatiDeliveryMan.ui.fragments.auth.forget_three.ForgetThreeFragment"
+        android:label="ForgetThreeFragment" >
+        <action
+            android:id="@+id/action_forgetThreeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+</navigation>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.beetleware.hayatiDeliveryMan.ui.fragments.order_details.OrderDetailsViewModel" />
+    </data>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_choose_payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/space_15"
+            android:fontFamily="@font/questive_bold"
+            android:text="@string/change_status"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/x16sp" />
+
+
+        <ImageView
+            android:id="@+id/close"
+            style="@style/clickable_view_border"
+            android:tint="@android:color/black"
+            android:layout_alignParentEnd="true"
+            android:padding="@dimen/space_15"
+            android:src="@drawable/ic_baseline_close_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_margin="@dimen/x10dp"
+            android:id="@+id/rc_update_status"
+            android:layout_below="@id/tv_choose_payment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <EditText
+            android:id="@+id/et_comment"
+            android:visibility="gone"
+            android:layout_marginStart="@dimen/space_20"
+            android:layout_marginEnd="@dimen/space_20"
+            android:paddingStart="@dimen/space_10"
+            android:background="@drawable/bk_login"
+            android:paddingTop="@dimen/x12dp"
+            android:paddingBottom="@dimen/x12dp"
+            android:paddingEnd="@dimen/space_10"
+            app:met_underlineColor="@color/transparent"
+            app:met_hideUnderline="true"
+            android:layout_below="@id/rc_update_status"
+            android:drawablePadding="@dimen/x12dp"
+            android:layout_marginTop="@dimen/x5dp"
+            android:textSize="@dimen/x15sp"
+            android:fontFamily="@font/questive_requler"
+            android:hint="@string/reason_for_cancel"
+            android:gravity="top"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x100dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_comment"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/x15dp"
+            android:layout_marginTop="@dimen/space_5"
+            android:layout_marginEnd="@dimen/x15dp"
+            android:layout_marginBottom="@dimen/x50dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:fontFamily="@font/questive_requler"
+            android:paddingTop="@dimen/x11dp"
+            android:paddingBottom="@dimen/x11dp"
+            android:text="@string/update"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/x12sp"
+            app:cornerRadius="@dimen/x8dp" />
+    </RelativeLayout>
+</layout>

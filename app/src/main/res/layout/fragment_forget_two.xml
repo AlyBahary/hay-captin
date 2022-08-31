@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.beetleware.hayatiDeliveryMan.ui.fragments.auth.forget_one.ForgetOneViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:background="@color/fill_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.core.widget.NestedScrollView
+            android:background="@color/fill_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/questive_bold"
+                            android:text="@string/activate_account"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/x16sp" />
+
+                        <ImageView
+                            android:id="@+id/close_verification"
+                            android:layout_alignParentEnd="true"
+                            android:tint="@android:color/black"
+                            android:padding="@dimen/x15dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_baseline_close_24"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_marginTop="@dimen/x15dp"
+                        android:layout_gravity="start"
+                        android:textSize="@dimen/x16sp"
+                        android:layout_marginStart="@dimen/x15dp"
+                        android:layout_marginEnd="@dimen/x15dp"
+                        android:fontFamily="@font/questive_bold"
+                        android:textColor="@android:color/black"
+                        android:text="@string/verify_account"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/tvphone_number"
+                        android:textColor="@color/light_pink"
+                        android:layout_marginTop="@dimen/space_10"
+                        android:layout_marginStart="@dimen/x20dp"
+                        android:layout_marginEnd="@dimen/space_20"
+                        android:text="@string/_50_5525"
+                        android:textSize="@dimen/x12sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+                    <com.chaos.view.PinView
+                        android:layout_marginTop="@dimen/x30dp"
+                        android:id="@+id/codePinView"
+                        android:layout_marginStart="@dimen/x30dp"
+                        android:layout_marginEnd="@dimen/x30dp"
+                        style="@style/PinWidget.PinView"
+                        android:layout_width="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="true"
+                        android:inputType="numberSigned"
+                        android:itemBackground="@color/white"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/x25sp"
+                        android:fontFamily="@font/almarai_bold"
+                        android:textStyle="bold"
+                        app:cursorColor="@color/colorPrimaryDark"
+                        app:cursorWidth="@dimen/x2dp"
+                        app:hideLineWhenFilled="true"
+                        app:itemCount="4"
+                        android:layout_gravity="center_horizontal"
+                        app:itemHeight="@dimen/x50dp"
+                        app:required="true"
+                        app:validation_type="none"
+                        app:itemRadius="@dimen/x10dp"
+                        app:itemSpacing="@dimen/x10dp"
+                        app:itemWidth="@dimen/x50dp"
+                        app:lineWidth="@dimen/x2dp"
+                        app:viewType="rectangle" />
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/x25dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:id="@+id/container_for_down"
+                            android:layout_marginStart="@dimen/x20dp"
+                            android:background="@drawable/radius_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/down_counter"
+                                android:textSize="@dimen/x13sp"
+                                android:fontFamily="@font/questive_bold"
+                                android:textColor="@color/white"
+                                android:padding="@dimen/x10sp"
+                                android:gravity="center_vertical"
+                                android:background="@drawable/radius_orange"
+                                android:text="30"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:id="@+id/tv_resend"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/x30dp"
+                                android:padding="@dimen/x10dp"
+                                android:text="@string/return_send_code"
+                                android:textColor="@android:color/black" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_gravity="center_vertical"
+                            android:id="@+id/tv_resend_via_email"
+                            android:layout_marginStart="@dimen/x30dp"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/x12sp"
+                            android:padding="@dimen/space_10"
+                            android:background="@drawable/bk_orange"
+                            style="@style/clickable_view_border"
+                            android:text="@string/verify_with_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        app:cornerRadius="@dimen/x8dp"
+                        android:paddingTop="@dimen/x11dp"
+                        android:paddingBottom="@dimen/x11dp"
+                        android:textSize="@dimen/x12sp"
+                        android:layout_marginTop="@dimen/x20dp"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/questive_requler"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="@android:color/white"
+                        android:text="@string/confirm_activation"
+                        android:layout_marginBottom="@dimen/x25dp"
+                        android:id="@+id/btn_verification"
+                        android:layout_width="match_parent"
+                        android:layout_marginStart="@dimen/space_20"
+                        android:layout_marginEnd="@dimen/space_20"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <include layout="@layout/progress_bar"
+            app:viewModel="@{viewModel}"/>
+    </RelativeLayout>
+
+</layout>
